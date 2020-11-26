@@ -28,9 +28,6 @@ properties:
   - name: registry-namespace
     value: ${REGISTRY_NAMESPACE}
     type: text
-  - name: image-name
-    value: ${APP_NAME}
-    type: text
   - name: app-name
     value: ${APP_NAME}
     type: text
