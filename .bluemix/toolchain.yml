@@ -65,7 +65,6 @@ services:
           $text: pipeline_tekton.yml
         env:
           APP_REPO: repo
-          APP_NAME: "{{form.pipeline.parameters.app-name}}"
           REGISTRY_REGION_ID: "{{form.pipeline.parameters.registry-region}}"
           REGISTRY_NAMESPACE: "{{form.pipeline.parameters.registry-namespace}}"
           API_KEY: "{{form.pipeline.parameters.api-key}}"
@@ -105,7 +104,6 @@ services:
 form:
   pipeline:
     parameters:
-      app-name: "{{services.repo.parameters.repo_name}}"
       prod-cluster-namespace: prod
     schema:
       $ref: deploy.json

@@ -67,26 +67,12 @@
                 "v-type": "resource-group",
                 "params": ["api-key"]
             }
-        },
-        "app-name": {
-            "description": {
-                "$ref": "#/messages/deploy.appDescription"
-            },
-            "type": "string",
-            "pattern": "\\S"
         }
     },
-    "required": ["app-name", "api-key", "registry-region", "registry-namespace"],
+    "required": ["api-key", "registry-region", "registry-namespace"],
     "form": [{
             "type": "validator",
             "url": "/devops/validator/validator-v1.html"
-        }, {
-            "type": "text",
-            "readonly": false,
-            "title": {
-                "$ref": "#/messages/deploy.appName"
-            },
-            "key": "app-name"
         }, {
             "type": "password",
             "readonly": false,
